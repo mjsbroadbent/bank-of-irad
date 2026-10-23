@@ -88,9 +88,37 @@
     }
   ],
   "coins": [
-    {"value": "10", "unit": "tyiyn", "metal": "bronze", "fill": "#b9814a", "edge": "#8a5a2c", "size": 74},
-    {"value": "50", "unit": "tyiyn", "metal": "brass", "fill": "#cfae55", "edge": "#9c7d2c", "size": 84},
-    {"value": "1", "unit": "som", "metal": "nickel", "fill": "#c9ccc8", "edge": "#8d918d", "size": 92},
-    {"value": "5", "unit": "som", "metal": "bimetal", "fill": "#cfae55", "edge": "#8d918d", "ring": "#c9ccc8", "size": 100}
+    {
+      "value": "10", "unit": "tyiyn", "metal": "bronze",
+      "alloy": {"en": "bronze", "ir": "kola", "ru": "бронза"},
+      "d": 16.0, "t": 1.25, "g": 2.0, "edge": "plain", "year": 2011,
+      "obverse": {"en": "The State Emblem; IRAD BANKY · БАНК ИРАДА and the year", "ir": "Mamlekettik gerb; IRAD BANKY · БАНК ИРАДА jana jılı", "ru": "Государственный герб; надпись IRAD BANKY · БАНК ИРАДА и год"},
+      "reverse": {"en": "10 TIYIN with a star and two ram's-horn sprigs, inside the ram's-horn border", "ir": "10 TIYIN, jıldız jana eki koshkar müyüz oyu, koshkar müyüz kürööndö", "ru": "10 TIYIN со звездой и двумя завитками «бараньи рога» в бордюре «бараньи рога»"},
+      "img": {"obverse": "/assets/coins/10tyiyn-obverse.webp", "reverse": "/assets/coins/10tyiyn-reverse.webp", "obverseThumb": "/assets/coins/10tyiyn-obverse-thumb.webp", "reverseThumb": "/assets/coins/10tyiyn-reverse-thumb.webp", "edge": "/assets/coins/10tyiyn-edge.webp"}
+    },
+    {
+      "value": "50", "unit": "tyiyn", "metal": "brass",
+      "alloy": {"en": "brass", "ir": "jez", "ru": "латунь"},
+      "d": 19.0, "t": 1.4, "g": 3.4, "edge": "plain", "year": 2011,
+      "obverse": {"en": "The State Emblem; IRAD BANKY · БАНК ИРАДА and the year", "ir": "Mamlekettik gerb; IRAD BANKY · БАНК ИРАДА jana jılı", "ru": "Государственный герб; надпись IRAD BANKY · БАНК ИРАДА и год"},
+      "reverse": {"en": "The Bank's tündük emblem over 50 TIYIN, inside the ram's-horn border", "ir": "Banktın tündük belgisi, astında 50 TIYIN, koshkar müyüz kürööndö", "ru": "Эмблема Банка (тюндюк) над надписью 50 TIYIN в бордюре «бараньи рога»"},
+      "img": {"obverse": "/assets/coins/50tyiyn-obverse.webp", "reverse": "/assets/coins/50tyiyn-reverse.webp", "obverseThumb": "/assets/coins/50tyiyn-obverse-thumb.webp", "reverseThumb": "/assets/coins/50tyiyn-reverse-thumb.webp", "edge": "/assets/coins/50tyiyn-edge.webp"}
+    },
+    {
+      "value": "1", "unit": "som", "metal": "nickel",
+      "alloy": {"en": "nickel-plated steel", "ir": "nikel kaptalgan bolot", "ru": "сталь с никелевым покрытием"},
+      "d": 22.0, "t": 1.6, "g": 4.6, "edge": "reeded", "year": 2011,
+      "obverse": {"en": "The State Emblem; IRAD BANKY · БАНК ИРАДА and the year", "ir": "Mamlekettik gerb; IRAD BANKY · БАНК ИРАДА jana jılı", "ru": "Государственный герб; надпись IRAD BANKY · БАНК ИРАДА и год"},
+      "reverse": {"en": "The Talas Alatau with Manas Peak over 1 SOM, inside the ram's-horn border", "ir": "Talas Ala-Too jana Manas chokusu, astında 1 SOM, koshkar müyüz kürööndö", "ru": "Таласский Алатау с пиком Манас над надписью 1 SOM в бордюре «бараньи рога»"},
+      "img": {"obverse": "/assets/coins/1som-obverse.webp", "reverse": "/assets/coins/1som-reverse.webp", "obverseThumb": "/assets/coins/1som-obverse-thumb.webp", "reverseThumb": "/assets/coins/1som-reverse-thumb.webp", "edge": "/assets/coins/1som-edge.webp"}
+    },
+    {
+      "value": "5", "unit": "som", "metal": "bimetal",
+      "alloy": {"en": "bimetallic: brass centre, nickel ring", "ir": "eki metall: ortosu jez, shakegi nikel", "ru": "биметалл: латунная вставка, никелевое кольцо"},
+      "d": 24.5, "t": 1.9, "g": 7.5, "edge": "segmented", "year": 2011,
+      "obverse": {"en": "The State Emblem on the centre; IRAD BANKY · БАНК ИРАДА and the year on the ring", "ir": "Ortosunda Mamlekettik gerb; shakeginde IRAD BANKY · БАНК ИРАДА jana jılı", "ru": "Государственный герб на вставке; надпись IRAD BANKY · БАНК ИРАДА и год на кольце"},
+      "reverse": {"en": "An Akyel horse over 5 SOM; BESH SOM and ПЯТЬ СОМОВ with ram's-horn ornaments on the ring", "ir": "Akyel atı, astında 5 SOM; shakeginde BESH SOM jana ПЯТЬ СОМОВ, koshkar müyüz oyu menen", "ru": "Лошадь акъель над надписью 5 SOM; на кольце BESH SOM и ПЯТЬ СОМОВ с орнаментом «бараньи рога»"},
+      "img": {"obverse": "/assets/coins/5som-obverse.webp", "reverse": "/assets/coins/5som-reverse.webp", "obverseThumb": "/assets/coins/5som-obverse-thumb.webp", "reverseThumb": "/assets/coins/5som-reverse-thumb.webp", "edge": "/assets/coins/5som-edge.webp"}
+    }
   ]
 }

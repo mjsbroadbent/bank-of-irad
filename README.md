@@ -15,7 +15,7 @@ menu and footer, switches language and renders the data-driven parts.
 
 - Pages: `index.html` (official rates, the peg, notice to the public, latest notices), `rates.html` (full table and
   converter), `currency-board.html` (rules, rate chart, the 2008 reset, dates, questions), `som.html` (banknote specimens
-  from `assets/notes/`, coins drawn in SVG by `site.js`), `notices.html`, `notice.html?id=<id>`, `banks.html` (register),
+  from `assets/notes/`, coin images from `assets/coins/`), `notices.html`, `notice.html?id=<id>`, `banks.html` (register),
   `publications.html` (deadpan dead ends: print only, "in preparation"), `about.html` (functions, history,
   governance, Clearing House, contact), `404.html`.
 - `assets/i18n.js`: `ui` (interface strings, en/ir/ru) and `pages` (Iradi and Russian text for every `data-i18n`
@@ -83,8 +83,15 @@ flip) and "Larger view" opens a dialog with front/back and previous/next. Cards 
   foil patch on the 100 and 500, tactile bars, the ÜLGÜ · ОБРАЗЕЦ · SPECIMEN overprint and a perforated SPECIMEN with
   real holes in the alpha channel). Replace the files to change the designs; don't hand-edit them.
 - `data/currency.json` → `banknotes`: `value`, `word`, `size` [w, h] mm, `colour`, `ink`, `front` and `back`
-  subjects (en/ir/ru), `img` paths, `tactile` (number of bars), `features`, optional `portrait` / `added`; `coins`
-  are drawn in SVG by `site.js` (ram's-horn rim). Subjects are canon places, horses and symbols only.
+  subjects (en/ir/ru), `img` paths, `tactile` (number of bars), `features`, optional `portrait` / `added`.
+  Subjects are canon places, horses and symbols only.
+- Coins (series of 2011: 10 and 50 tyiyn, 1 and 5 som) are shown below the notes at their relative diameters; a tap
+  or click turns a coin over, and "Larger view" opens the same dialog with obverse, reverse and edge (a three-quarter
+  view). Images: `assets/coins/<value><unit>-obverse.webp` / `-reverse.webp` (900 px, transparent), `-thumb.webp`
+  (300 px) and `-edge.webp` (1200 px), about 1.3 MB in all, rendered as struck metal by the same offline generator
+  setup as the notes; replace the files to change them. `data/currency.json` → `coins`: `value`, `unit`, `metal`
+  (colour word, `metal_*` keys), `alloy`, `d` / `t` mm, `g`, `edge` (`plain`, `reeded`, `segmented`), `year`,
+  `obverse` / `reverse` subjects (en/ir/ru), `img`. Strings: `coin*`, `edge_*`, `lbObverse` / `lbReverse` / `lbEdge`.
 - Strings: `note*` and `lb*` keys in `i18n.js` `ui`; the "Checking a banknote" text (`secP`) describes the features
   drawn on the notes, so change both together.
 

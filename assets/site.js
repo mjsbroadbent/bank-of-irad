@@ -293,8 +293,7 @@
     }).catch(function () { failBox(el); });
   };
 
-  /* banknotes (specimen images, turn over on tap, larger view) and coin facsimiles */
-  var HORN = "M20 31 L20 22 C20 16.6 11.9 13.9 11.0 20.2 C10.55 24.7 15.05 25.15 15.05 22M20 22 C20 16.6 28.1 13.9 29.0 20.2 C29.45 24.7 24.95 25.15 24.95 22";
+  /* banknotes (specimen images, turn over on tap, larger view) */
   var NOTES = [];
   function noteSide(n, side) { return side === "back" ? n.back : n.front; }
   function noteAlt(n, side) { return t(side === "back" ? "noteAltBack" : "noteAltFront", { v: n.value, s: tri(noteSide(n, side)) }); }
@@ -314,7 +313,8 @@
       '<img class="nface nback" src="' + esc(n.img.backThumb) + '" alt="' + esc(noteAlt(n, "back")) + '" width="' + Math.round(w * 4.5) + '" height="' + Math.round(h * 4.5) + '" loading="lazy" decoding="async">' +
       "</span></button></div><figcaption>" + cap + "</figcaption></figure>";
   }
-  var lb = { i: 0, side: "front" };
+  var lb = { i: 0, side: "front", set: "notes" };
+  function lbList() { return lb.set === "coins" ? COINS : NOTES; }
   function lightbox() {
     var d = $("#noteLb");
     if (!d) {
@@ -327,20 +327,22 @@
         var b = e.target.closest("button[data-act]"); if (!b) return;
         var a = b.getAttribute("data-act");
         if (a === "close") d.close();
-        else if (a === "prev") lbShow((lb.i + NOTES.length - 1) % NOTES.length, lb.side);
-        else if (a === "next") lbShow((lb.i + 1) % NOTES.length, lb.side);
-        else lbShow(lb.i, a);
+        else if (a === "prev") lbGo(-1);
+        else if (a === "next") lbGo(1);
+        else lbOpen(lb.i, a);
       });
       d.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowLeft") { e.preventDefault(); lbShow((lb.i + NOTES.length - 1) % NOTES.length, lb.side); }
-        else if (e.key === "ArrowRight") { e.preventDefault(); lbShow((lb.i + 1) % NOTES.length, lb.side); }
+        if (e.key === "ArrowLeft") { e.preventDefault(); lbGo(-1); }
+        else if (e.key === "ArrowRight") { e.preventDefault(); lbGo(1); }
       });
     }
     return d;
   }
+  function lbGo(step) { var L = lbList(); lbOpen((lb.i + L.length + step) % L.length, lb.side); }
+  function lbOpen(i, side) { if (lb.set === "coins") coinLb(i, side); else lbShow(i, side); }
   function lbShow(i, side) {
     var d = lightbox(), n = NOTES[i]; if (!n) return;
-    lb.i = i; lb.side = side;
+    lb.i = i; lb.side = side; lb.set = "notes";
     d.innerHTML = '<div class="lb-box"><div class="lb-top"><b>' + esc(t("noteCap", { v: n.value })) + "</b> <span>" + esc(t("noteSize", { w: n.size[0], h: n.size[1] })) + " · " + esc(t("noteColour", { c: tri(n.colour) })) + "</span>" +
       '<button type="button" class="lb-x" data-act="close" aria-label="' + esc(t("lbClose")) + '">×</button></div>' +
       '<div class="lb-img"><img src="' + esc(n.img[side]) + '" alt="' + esc(noteAlt(n, side)) + '" width="' + Math.round(n.size[0] * 12) + '" height="' + Math.round(n.size[1] * 12) + '"></div>' +
@@ -352,16 +354,42 @@
     if (!d.open) { if (d.showModal) d.showModal(); else d.setAttribute("open", ""); }
     var f = $('[data-act="' + side + '"]', d); if (f) f.focus();
   }
-  function coinSVG(c, i) {
-    var S = c.size, r = 50, id = "ch" + i, horns = "";
-    for (var k = 0; k < 24; k++) horns += '<g transform="rotate(' + (k * 15) + ' 50 50) translate(45.4 3.2) scale(.23)"><path d="' + HORN + '" fill="none" stroke="' + c.edge + '" stroke-width="3" stroke-linecap="round"/></g>';
-    var unit = c.unit === "som" ? "SOM" : "TIYIN";
-    return '<svg width="' + S + '" height="' + S + '" viewBox="0 0 100 100" role="img" aria-label="' + esc(c.value + " " + t(c.unit === "som" ? "unitSom" : "unitTyiyn")) + '" xmlns="http://www.w3.org/2000/svg">' +
-      '<circle cx="50" cy="50" r="49" fill="' + (c.ring || c.fill) + '" stroke="' + c.edge + '" stroke-width="1.2"/>' + horns +
-      (c.ring ? '<circle cx="50" cy="50" r="34" fill="' + c.fill + '" stroke="' + c.edge + '" stroke-width=".8"/>' : '<circle cx="50" cy="50" r="38" fill="none" stroke="' + c.edge + '" stroke-width=".8"/>') +
-      '<text x="50" y="58" text-anchor="middle" font-family="PT Serif, Georgia, serif" font-weight="700" font-size="30" fill="#2b2418" fill-opacity=".72">' + c.value + "</text>" +
-      '<text x="50" y="72" text-anchor="middle" font-family="PT Sans, Arial, sans-serif" font-weight="700" font-size="8" letter-spacing="1.5" fill="#2b2418" fill-opacity=".7">' + unit + "</text>" +
-      '<path d="M44 30 l6 -6 l6 6" fill="none" stroke="' + c.edge + '" stroke-width="1.2"/><text x="50" y="40" text-anchor="middle" font-family="PT Sans, Arial, sans-serif" font-size="7" letter-spacing="1" fill="' + c.edge + '">IRAD</text></svg>';
+  /* coins: photographs of struck coins (obverse, reverse, edge), shown at relative size, turn over on tap */
+  var COINS = [], COIN_MAX = 24.5;
+  function dec(x) { return fmtNum(x, x % 1 === 0 ? 0 : (Math.round(x * 10) === x * 10 ? 1 : 2)); }
+  function coinName(c) { return c.value + " " + t(c.unit === "som" ? "unitSom" : "unitTyiyn"); }
+  function coinSub(c, side) { return side === "reverse" ? tri(c.reverse) : tri(c.obverse); }
+  function coinAlt(c, side) { return t(side === "reverse" ? "coinAltRev" : side === "edge" ? "coinAltEdge" : "coinAltObv", { c: coinName(c), s: coinSub(c, side) }); }
+  function coinSpec(c) { return t("coinSpec", { d: dec(c.d), t: dec(c.t), g: dec(c.g) }); }
+  function coinMeta(c, up) { var s = t("coinMeta", { m: tri(c.alloy), e: t("edge_" + c.edge), y: c.year }); return up ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+  function coinCard(c, i) {
+    var sizes = "(max-width: 680px) 45vw, 230px";
+    function face(side, cls) {
+      return '<img class="nface ' + cls + '" src="' + esc(c.img[side + "Thumb"]) + '" srcset="' + esc(c.img[side + "Thumb"]) + " 300w, " + esc(c.img[side]) + ' 900w" sizes="' + sizes + '" alt="' + esc(coinAlt(c, side)) + '" width="300" height="300" loading="lazy" decoding="async">';
+    }
+    var cap = "<b>" + esc(t("coinCap", { c: coinName(c) })) + "</b> " + '<span class="nsize">' + esc(coinSpec(c)) + "</span>" +
+      '<span class="nsub">' + esc(coinMeta(c, true)) + "</span>" +
+      '<span class="nsub">' + esc(t("coinObv", { s: tri(c.obverse) })) + "</span>" +
+      '<span class="nsub">' + esc(t("coinRev", { s: tri(c.reverse) })) + "</span>" +
+      '<button type="button" class="nzoom" data-c="' + i + '">' + esc(t("coinZoom")) + "</button>";
+    return '<figure class="coin"><div class="cbox"><div class="cscale" style="width:' + (c.d / COIN_MAX * 100).toFixed(1) + '%">' +
+      '<button type="button" class="nflip cflip" data-c="' + i + '" aria-pressed="false" aria-label="' + esc(t("coinFlip", { c: coinName(c) })) + '" style="aspect-ratio:1 / 1">' +
+      '<span class="nflip-in">' + face("obverse", "nfront") + face("reverse", "nback") + "</span></button></div></div>" +
+      "<figcaption>" + cap + "</figcaption></figure>";
+  }
+  function coinLb(i, side) {
+    var d = lightbox(), c = COINS[i]; if (!c) return;
+    lb.i = i; lb.side = side; lb.set = "coins";
+    var sides = ["obverse", "reverse", "edge"], lab = { obverse: "lbObverse", reverse: "lbReverse", edge: "lbEdge" };
+    d.innerHTML = '<div class="lb-box lb-coin"><div class="lb-top"><b>' + esc(t("coinCap", { c: coinName(c) })) + "</b> <span>" + esc(coinSpec(c)) + " · " + esc(coinMeta(c)) + "</span>" +
+      '<button type="button" class="lb-x" data-act="close" aria-label="' + esc(t("lbClose")) + '">×</button></div>' +
+      '<div class="lb-img"><img src="' + esc(c.img[side]) + '" alt="' + esc(coinAlt(c, side)) + '"></div>' +
+      '<div class="lb-bar"><button type="button" data-act="prev" aria-label="' + esc(t("lbPrevCoin")) + '">‹</button>' +
+      '<span class="lb-sides">' + sides.map(function (s) { return '<button type="button" data-act="' + s + '" aria-pressed="' + (side === s) + '">' + esc(t(lab[s])) + "</button>"; }).join("") + "</span>" +
+      '<button type="button" data-act="next" aria-label="' + esc(t("lbNextCoin")) + '">›</button></div>' +
+      '<p class="lb-cap">' + esc(side === "edge" ? t("coinEdgeCap", { e: t("edge_" + c.edge) }) : t(side === "reverse" ? "coinRev" : "coinObv", { s: coinSub(c, side) })) + "</p></div>";
+    if (!d.open) { if (d.showModal) d.showModal(); else d.setAttribute("open", ""); }
+    var f = $('[data-act="' + side + '"]', d); if (f) f.focus();
   }
   pages.som = function () {
     getJSON("/data/currency.json").then(function (d) {
@@ -376,11 +404,18 @@
           if (z) { var i = +z.getAttribute("data-i"), card = $('.nflip[data-i="' + i + '"]', el); lbShow(i, card && card.classList.contains("flipped") ? "back" : "front"); }
         };
       }
-      var lbd = $("#noteLb"); if (lbd && lbd.open) lbShow(lb.i, lb.side);
+      COINS = d.coins;
       var co = $("#coins");
-      if (co) co.innerHTML = d.coins.map(function (c, i) {
-        return '<div class="coin">' + coinSVG(c, i) + "<b>" + esc(c.value + " " + t(c.unit === "som" ? "unitSom" : "unitTyiyn")) + '</b><br><span class="muted">' + esc(t("metal_" + c.metal)) + "</span></div>";
-      }).join("");
+      if (co) {
+        co.innerHTML = COINS.map(coinCard).join("");
+        co.onclick = function (e) {
+          var f = e.target.closest(".cflip");
+          if (f) { var on = !f.classList.contains("flipped"); f.classList.toggle("flipped", on); f.setAttribute("aria-pressed", String(on)); return; }
+          var z = e.target.closest(".nzoom");
+          if (z) { var i = +z.getAttribute("data-c"), card = $('.cflip[data-c="' + i + '"]', co); coinLb(i, card && card.classList.contains("flipped") ? "reverse" : "obverse"); }
+        };
+      }
+      var lbd = $("#noteLb"); if (lbd && lbd.open) lbOpen(lb.i, lb.side);
     }).catch(function () { failBox($("#notes")); });
   };
 

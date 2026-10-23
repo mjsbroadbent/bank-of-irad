@@ -223,9 +223,20 @@ table.rates tr.usd td.som { font-weight: 700; }
 .lb-cap { text-align: center; font-size: .9rem; color: var(--ink-2); margin: 10px 0 0; }
 @media (prefers-reduced-motion: reduce) { .nflip-in { transition: none; } }
 @media (max-width: 680px) { .notes { grid-template-columns: minmax(0, 1fr); } .lb { width: 100vw; max-width: 100vw; } .lb-box { padding: 10px 10px 12px; } }
-.coins { display: flex; flex-wrap: wrap; gap: 26px; align-items: flex-end; }
-.coin { text-align: center; font-size: .86rem; color: var(--ink-2); }
-.coin svg { display: block; margin: 0 auto 6px; }
+.coins { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px 22px; align-items: start; }
+.coin { margin: 0; display: flex; flex-direction: column; }
+.coin .cbox { width: 100%; max-width: 230px; aspect-ratio: 1 / 1; display: flex; align-items: flex-end; justify-content: flex-start; }
+.coin .cscale { perspective: 900px; }
+.coin .cflip { border-radius: 50%; }
+.coin .cflip:focus-visible { outline-offset: 3px; }
+.coin .nface { filter: drop-shadow(0 1px 1px #00000045) drop-shadow(0 3px 7px #0000001f); }
+.coin .cflip:hover .nface { filter: drop-shadow(0 2px 2px #0000004a) drop-shadow(0 6px 12px #00000026); }
+.coin figcaption { font-size: .86rem; color: var(--ink-2); margin-top: 10px; line-height: 1.45; }
+.coin figcaption b { font-family: var(--serif); color: var(--green-ink); font-size: 1rem; }
+.coin .nsize { font-variant-numeric: tabular-nums; }
+.coin .nsub { display: block; }
+.lb-coin .lb-img img { max-height: 68vh; }
+@media (max-width: 980px) { .coins { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 /* quick links */
 .quick { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
