@@ -131,7 +131,7 @@
     if (bottom) {
       bottom.innerHTML =
         '<footer class="foot"><div class="wrap"><div class="cols">' +
-        '<div><img class="flogo" src="' + logoSrc(true) + '" alt="' + esc(t("siteName")) + '" width="207" height="46"><address>' + t("footAddr") + "</address></div>" +
+        '<div><img class="flogo" src="' + logoSrc(true) + '" alt="' + esc(t("siteName")) + '" width="207" height="46"><address>' + t("footAddr") + "</address>" + '<a class="tulpar-ch" href="https://tulparapp.com/app/#sub=bankofirad" rel="noopener"><img src="/assets/tulpar.svg" alt="" width="22" height="22"><span>' + esc(t("footTulpar")) + "<small>@bankofirad</small></span></a></div>" +
         "<div><h4>" + esc(t("footBank")) + "</h4><ul>" +
         ["rates", "board", "som", "notices", "banks", "pubs", "about"].map(function (k) { return '<li><a href="' + navHref(k) + '">' + esc(t("nav_" + k)) + "</a></li>"; }).join("") +
         "</ul></div>" +

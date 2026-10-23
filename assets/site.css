@@ -275,6 +275,10 @@ table.rates tr.usd td.som { font-weight: 700; }
 .foot li { margin: 0 0 6px; }
 .foot .flogo { display: block; height: 46px; width: auto; margin-bottom: 12px; }
 .foot address { font-style: normal; line-height: 1.65; }
+.foot .tulpar-ch { display: inline-flex; align-items: center; gap: 9px; margin-top: 12px; line-height: 1.25; }
+.foot .tulpar-ch img { width: 22px; height: 22px; border-radius: 5px; flex: none; }
+.foot .tulpar-ch small { display: block; color: #a9bbb0; font-size: .78rem; }
+
 .foot .fine { border-top: 1px solid #ffffff26; margin-top: 22px; padding-top: 14px; font-size: .78rem; color: #a9bbb0; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .foot .govline { display: flex; align-items: center; gap: 8px; }
 .foot .govline img { width: 22px; height: 22px; }
