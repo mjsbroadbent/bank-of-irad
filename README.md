@@ -14,8 +14,8 @@ No build step. Each page is a plain HTML file with its English text inline; `ass
 menu and footer, switches language and renders the data-driven parts.
 
 - Pages: `index.html` (official rates, the peg, notice to the public, latest notices), `rates.html` (full table and
-  converter), `currency-board.html` (rules, rate chart, the 2008 reset, dates, questions), `som.html` (banknote and
-  coin facsimiles drawn in SVG by `site.js`), `notices.html`, `notice.html?id=<id>`, `banks.html` (register),
+  converter), `currency-board.html` (rules, rate chart, the 2008 reset, dates, questions), `som.html` (banknote specimens
+  from `assets/notes/`, coins drawn in SVG by `site.js`), `notices.html`, `notice.html?id=<id>`, `banks.html` (register),
   `publications.html` (deadpan dead ends: print only, "in preparation"), `about.html` (functions, history,
   governance, Clearing House, contact), `404.html`.
 - `assets/i18n.js`: `ui` (interface strings, en/ir/ru) and `pages` (Iradi and Russian text for every `data-i18n`
@@ -70,9 +70,23 @@ Add an object to `notices` in `data/notices.json` (the site sorts by date) and i
 
 ## Banknotes and coins
 
-`data/currency.json`: `banknotes` (`value`, `word`, `ink`, `tint`, optional `portrait` / `added`) and `coins`.
-Denominations follow the wiki (*Iradi som*); colours are site-level. The facsimiles are marked "specimen" and never
-draw a portrait.
+`som.html` shows the 2011 series (1, 5, 10, 20, 50, 100 and 500 som) as published specimens: each note's front with
+its caption (value, size in mm, main colour, front and back subjects); a tap or click turns the note over (CSS 3D
+flip) and "Larger view" opens a dialog with front/back and previous/next. Cards are scaled to the real note widths
+(120 to 150 mm).
+
+- Images: `assets/notes/<value>-front.webp` / `-back.webp` (12 px per mm, 1440–1800 px wide) and `-thumb.webp`
+  (4.5 px per mm), about 4.4 MB in all. They are rendered by an offline generator kept outside this repo (paper and
+  fibres, split-fountain underprint, guilloche, line engraving made from the Irad Wiki Commons photographs, the
+  Alimbekov portrait on the 100, the Bank's tündük mark and ram's-horn frieze, Chairman A. Temirov's signature,
+  serials AA 0000000, microtext, watermark, thread, see-through register, colour-shifting numeral on the 20 and 50,
+  foil patch on the 100 and 500, tactile bars, the ÜLGÜ · ОБРАЗЕЦ · SPECIMEN overprint and a perforated SPECIMEN with
+  real holes in the alpha channel). Replace the files to change the designs; don't hand-edit them.
+- `data/currency.json` → `banknotes`: `value`, `word`, `size` [w, h] mm, `colour`, `ink`, `front` and `back`
+  subjects (en/ir/ru), `img` paths, `tactile` (number of bars), `features`, optional `portrait` / `added`; `coins`
+  are drawn in SVG by `site.js` (ram's-horn rim). Subjects are canon places, horses and symbols only.
+- Strings: `note*` and `lb*` keys in `i18n.js` `ui`; the "Checking a banknote" text (`secP`) describes the features
+  drawn on the notes, so change both together.
 
 ## Checking
 

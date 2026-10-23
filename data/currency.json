@@ -1,17 +1,96 @@
 {
   "banknotes": [
-    { "value": 1,   "word": { "en": "ONE SOM", "ir": "BIR SOM", "ru": "ОДИН СОМ" },          "ink": "#3f6b55", "tint": "#e6efe6" },
-    { "value": 5,   "word": { "en": "FIVE SOM", "ir": "BESH SOM", "ru": "ПЯТЬ СОМОВ" },       "ink": "#7a5230", "tint": "#f2e8dc" },
-    { "value": 10,  "word": { "en": "TEN SOM", "ir": "ON SOM", "ru": "ДЕСЯТЬ СОМОВ" },        "ink": "#2f5a7a", "tint": "#e3ecf2" },
-    { "value": 20,  "word": { "en": "TWENTY SOM", "ir": "JIYIRMA SOM", "ru": "ДВАДЦАТЬ СОМОВ" }, "ink": "#5e4778", "tint": "#ece6f2" },
-    { "value": 50,  "word": { "en": "FIFTY SOM", "ir": "ELÜÜ SOM", "ru": "ПЯТЬДЕСЯТ СОМОВ" },  "ink": "#69702c", "tint": "#eff0dd" },
-    { "value": 100, "word": { "en": "ONE HUNDRED SOM", "ir": "JÜZ SOM", "ru": "СТО СОМОВ" },  "ink": "#0e4d3a", "tint": "#e8eedf", "portrait": true },
-    { "value": 500, "word": { "en": "FIVE HUNDRED SOM", "ir": "BESH JÜZ SOM", "ru": "ПЯТЬСОТ СОМОВ" }, "ink": "#8a2f2a", "tint": "#f4e4df", "added": true }
+    {
+      "value": 1,
+      "word": {"en": "ONE SOM", "ir": "BIR SOM", "ru": "ОДИН СОМ"},
+      "size": [120, 60],
+      "colour": {"en": "teal", "ir": "kök-jashıl", "ru": "бирюзово-зелёный"},
+      "ink": "#1F5A5E",
+      "front": {"en": "The tündük, the crown of the yurt", "ir": "Tündük, boz üydün chañıragı", "ru": "Тюндюк, венец юрты"},
+      "back": {"en": "Manas Peak in the Talas Alatau", "ir": "Talas Ala-Toosundagı Manas chokusu", "ru": "Пик Манас в Таласском Алатау"},
+      "img": {"front": "/assets/notes/1-front.webp", "back": "/assets/notes/1-back.webp", "frontThumb": "/assets/notes/1-front-thumb.webp", "backThumb": "/assets/notes/1-back-thumb.webp"},
+      "tactile": 1,
+      "features": ["watermark", "thread", "register", "tactile", "microtext", "intaglio"]
+    },
+    {
+      "value": 5,
+      "word": {"en": "FIVE SOM", "ir": "BESH SOM", "ru": "ПЯТЬ СОМОВ"},
+      "size": [125, 62],
+      "colour": {"en": "brown", "ir": "küröñ", "ru": "коричневый"},
+      "ink": "#5E3B1F",
+      "front": {"en": "A Chongtor horse on the summer pasture", "ir": "Jayloodogu Chongtor atı", "ru": "Лошадь чонгтор на летнем пастбище"},
+      "back": {"en": "The Besh-Tash valley", "ir": "Besh-Tash öröönü", "ru": "Долина Беш-Таш"},
+      "img": {"front": "/assets/notes/5-front.webp", "back": "/assets/notes/5-back.webp", "frontThumb": "/assets/notes/5-front-thumb.webp", "backThumb": "/assets/notes/5-back-thumb.webp"},
+      "tactile": 2,
+      "features": ["watermark", "thread", "register", "tactile", "microtext", "intaglio"]
+    },
+    {
+      "value": 10,
+      "word": {"en": "TEN SOM", "ir": "ON SOM", "ru": "ДЕСЯТЬ СОМОВ"},
+      "size": [130, 64],
+      "colour": {"en": "blue", "ir": "kök", "ru": "синий"},
+      "ink": "#1E4A78",
+      "front": {"en": "An Akyel horse, the Talas Alatau behind", "ir": "Akyel atı, artında Talas Ala-Too", "ru": "Лошадь акъель на фоне Таласского Алатау"},
+      "back": {"en": "Akyel horses at the gallop", "ir": "Chabıp bara jatkan Akyel attarı", "ru": "Скачущие акъельские лошади"},
+      "img": {"front": "/assets/notes/10-front.webp", "back": "/assets/notes/10-back.webp", "frontThumb": "/assets/notes/10-front-thumb.webp", "backThumb": "/assets/notes/10-back-thumb.webp"},
+      "tactile": 3,
+      "features": ["watermark", "thread", "register", "tactile", "microtext", "intaglio"]
+    },
+    {
+      "value": 20,
+      "word": {"en": "TWENTY SOM", "ir": "JIYIRMA SOM", "ru": "ДВАДЦАТЬ СОМОВ"},
+      "size": [135, 65],
+      "colour": {"en": "violet", "ir": "kızgılt kök", "ru": "фиолетовый"},
+      "ink": "#4F346E",
+      "front": {"en": "The citadel of the Old City of Talas (Köhne Diz)", "ir": "Talastagı Eski shaardın sepili (Köhne Diz)", "ru": "Цитадель Старого города Таласа (Кёхне-Диз)"},
+      "back": {"en": "The Caravanserai of Rabat-i-Safed", "ir": "Rabat-i-Safed karvan-sarayı", "ru": "Караван-сарай Рабат-и-Сафед"},
+      "img": {"front": "/assets/notes/20-front.webp", "back": "/assets/notes/20-back.webp", "frontThumb": "/assets/notes/20-front-thumb.webp", "backThumb": "/assets/notes/20-back-thumb.webp"},
+      "tactile": 4,
+      "features": ["watermark", "thread", "register", "tactile", "microtext", "intaglio", "ovi"]
+    },
+    {
+      "value": 50,
+      "word": {"en": "FIFTY SOM", "ir": "ELÜÜ SOM", "ru": "ПЯТЬДЕСЯТ СОМОВ"},
+      "size": [140, 67],
+      "colour": {"en": "olive", "ir": "zaytun tüstüü", "ru": "оливковый"},
+      "ink": "#5A5A1C",
+      "front": {"en": "The Church of St. Janyl, Iyık Janyl", "ir": "Iyık Janıl chirköösü, Iyık Janıl", "ru": "Церковь Святой Джаныл, Ийык-Джаныл"},
+      "back": {"en": "The ridge of the Talas Alatau", "ir": "Talas Ala-Too kırka toosu", "ru": "Хребет Таласский Алатау"},
+      "img": {"front": "/assets/notes/50-front.webp", "back": "/assets/notes/50-back.webp", "frontThumb": "/assets/notes/50-front-thumb.webp", "backThumb": "/assets/notes/50-back-thumb.webp"},
+      "tactile": 5,
+      "features": ["watermark", "thread", "register", "tactile", "microtext", "intaglio", "ovi"]
+    },
+    {
+      "value": 100,
+      "word": {"en": "ONE HUNDRED SOM", "ir": "JÜZ SOM", "ru": "СТО СОМОВ"},
+      "size": [145, 68],
+      "colour": {"en": "dark green", "ir": "kochkul jashıl", "ru": "тёмно-зелёный"},
+      "ink": "#0E4D3A",
+      "front": {"en": "Amanbek Alimbekov", "ir": "Amanbek Alimbekov", "ru": "Аманбек Алимбеков"},
+      "back": {"en": "Talas State University", "ir": "Talas mamlekettik universiteti", "ru": "Таласский государственный университет"},
+      "img": {"front": "/assets/notes/100-front.webp", "back": "/assets/notes/100-back.webp", "frontThumb": "/assets/notes/100-front-thumb.webp", "backThumb": "/assets/notes/100-back-thumb.webp"},
+      "tactile": 6,
+      "features": ["watermark", "thread", "register", "tactile", "microtext", "intaglio", "foil"],
+      "portrait": true
+    },
+    {
+      "value": 500,
+      "word": {"en": "FIVE HUNDRED SOM", "ir": "BESH JÜZ SOM", "ru": "ПЯТЬСОТ СОМОВ"},
+      "size": [150, 70],
+      "colour": {"en": "claret", "ir": "kochkul kızıl", "ru": "бордовый"},
+      "ink": "#7E2228",
+      "front": {"en": "The State Emblem", "ir": "Mamlekettik gerb", "ru": "Государственный герб"},
+      "back": {"en": "Lake Sary-Chelek", "ir": "Sarı-Chelek kölü", "ru": "Озеро Сары-Челек"},
+      "img": {"front": "/assets/notes/500-front.webp", "back": "/assets/notes/500-back.webp", "frontThumb": "/assets/notes/500-front-thumb.webp", "backThumb": "/assets/notes/500-back-thumb.webp"},
+      "tactile": 7,
+      "features": ["watermark", "thread", "register", "tactile", "microtext", "intaglio", "foil"],
+      "added": true
+    }
   ],
   "coins": [
-    { "value": "10", "unit": "tyiyn", "metal": "bronze", "fill": "#b9814a", "edge": "#8a5a2c", "size": 74 },
-    { "value": "50", "unit": "tyiyn", "metal": "brass",  "fill": "#cfae55", "edge": "#9c7d2c", "size": 84 },
-    { "value": "1",  "unit": "som",   "metal": "nickel", "fill": "#c9ccc8", "edge": "#8d918d", "size": 92 },
-    { "value": "5",  "unit": "som",   "metal": "bimetal", "fill": "#cfae55", "edge": "#8d918d", "ring": "#c9ccc8", "size": 100 }
+    {"value": "10", "unit": "tyiyn", "metal": "bronze", "fill": "#b9814a", "edge": "#8a5a2c", "size": 74},
+    {"value": "50", "unit": "tyiyn", "metal": "brass", "fill": "#cfae55", "edge": "#9c7d2c", "size": 84},
+    {"value": "1", "unit": "som", "metal": "nickel", "fill": "#c9ccc8", "edge": "#8d918d", "size": 92},
+    {"value": "5", "unit": "som", "metal": "bimetal", "fill": "#cfae55", "edge": "#8d918d", "ring": "#c9ccc8", "size": 100}
   ]
 }

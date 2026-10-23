@@ -293,33 +293,64 @@
     }).catch(function () { failBox(el); });
   };
 
-  /* banknote and coin facsimiles */
+  /* banknotes (specimen images, turn over on tap, larger view) and coin facsimiles */
   var HORN = "M20 31 L20 22 C20 16.6 11.9 13.9 11.0 20.2 C10.55 24.7 15.05 25.15 15.05 22M20 22 C20 16.6 28.1 13.9 29.0 20.2 C29.45 24.7 24.95 25.15 24.95 22";
-  function guilloche(cx, cy, rx, ry, n, col, op) {
-    var s = "";
-    for (var i = 0; i < n; i++) s += '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + rx + '" ry="' + ry + '" transform="rotate(' + (i * 180 / n).toFixed(1) + " " + cx + " " + cy + ')" fill="none" stroke="' + col + '" stroke-width=".8" opacity="' + op + '"/>';
-    return s;
+  var NOTES = [];
+  function noteSide(n, side) { return side === "back" ? n.back : n.front; }
+  function noteAlt(n, side) { return t(side === "back" ? "noteAltBack" : "noteAltFront", { v: n.value, s: tri(noteSide(n, side)) }); }
+  function noteCard(n, i) {
+    var w = n.size[0], h = n.size[1];
+    var cap = "<b>" + esc(t("noteCap", { v: n.value })) + "</b> " +
+      '<span class="nsize">' + esc(t("noteSize", { w: w, h: h })) + "</span> · " + esc(t("noteColour", { c: tri(n.colour) })) +
+      '<span class="nsub">' + esc(t("noteFront", { s: tri(n.front) })) + "</span>" +
+      '<span class="nsub">' + esc(t("noteBack", { s: tri(n.back) })) + "</span>";
+    if (n.portrait) cap += '<span class="nsub">' + esc(t("notePortrait")) + "</span>";
+    if (n.added) cap += '<span class="nsub">' + esc(t("noteAdded")) + "</span>";
+    cap += '<button type="button" class="nzoom" data-i="' + i + '">' + esc(t("noteZoom")) + "</button>";
+    return '<figure class="note"><div class="nscale" style="width:' + (w / 150 * 100).toFixed(1) + '%">' +
+      '<button type="button" class="nflip" data-i="' + i + '" aria-pressed="false" aria-label="' + esc(t("noteFlip", { v: n.value })) + '" style="aspect-ratio:' + w + " / " + h + '">' +
+      '<span class="nflip-in">' +
+      '<img class="nface nfront" src="' + esc(n.img.frontThumb) + '" alt="' + esc(noteAlt(n, "front")) + '" width="' + Math.round(w * 4.5) + '" height="' + Math.round(h * 4.5) + '" loading="lazy" decoding="async">' +
+      '<img class="nface nback" src="' + esc(n.img.backThumb) + '" alt="' + esc(noteAlt(n, "back")) + '" width="' + Math.round(w * 4.5) + '" height="' + Math.round(h * 4.5) + '" loading="lazy" decoding="async">' +
+      "</span></button></div><figcaption>" + cap + "</figcaption></figure>";
   }
-  function noteSVG(n, i) {
-    var c = n.ink, id = "hp" + i, W = 600, H = 300;
-    var spec = t("specimen");
-    var s = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + esc(t("noteAlt", { v: n.value })) + '" xmlns="http://www.w3.org/2000/svg">' +
-      '<defs><pattern id="' + id + '" width="24" height="24" patternUnits="userSpaceOnUse"><g transform="scale(.6)"><path d="' + HORN + '" fill="none" stroke="' + c + '" stroke-width="2.2" stroke-linecap="round"/></g></pattern></defs>' +
-      '<rect x="1" y="1" width="' + (W - 2) + '" height="' + (H - 2) + '" rx="10" fill="' + n.tint + '" stroke="' + c + '" stroke-opacity=".35"/>' +
-      '<rect x="12" y="12" width="' + (W - 24) + '" height="' + (H - 24) + '" rx="6" fill="url(#' + id + ')" opacity=".55"/>' +
-      '<rect x="30" y="30" width="' + (W - 60) + '" height="' + (H - 60) + '" rx="4" fill="' + n.tint + '" stroke="' + c + '" stroke-width="1.5"/>' +
-      guilloche(300, 150, 120, 52, 18, c, .28) + guilloche(470, 150, 62, 62, 10, c, .22);
-    if (n.portrait) s += '<ellipse cx="470" cy="150" rx="58" ry="74" fill="' + n.tint + '" stroke="' + c + '" stroke-width="2"/>' + guilloche(470, 150, 50, 66, 8, c, .2);
-    else s += '<image href="/assets/bankofirad-mark-one-ink.svg" x="425" y="105" width="90" height="90" opacity=".85"/>';
-    s += '<text x="50" y="66" font-family="PT Serif, Georgia, serif" font-weight="700" font-size="20" letter-spacing="3" fill="' + c + '">IRAD BANKY</text>' +
-      '<text x="50" y="88" font-family="PT Serif, Georgia, serif" font-size="12" letter-spacing="2.5" fill="' + c + '">BANK OF IRAD · БАНК ИРАДА</text>' +
-      '<text x="50" y="205" font-family="PT Serif, Georgia, serif" font-weight="700" font-size="92" fill="' + c + '">' + n.value + "</text>" +
-      '<text x="52" y="240" font-family="PT Sans, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="2" fill="' + c + '">' + esc(tri(n.word)) + "</text>" +
-      '<text x="' + (W - 50) + '" y="70" text-anchor="end" font-family="PT Serif, Georgia, serif" font-weight="700" font-size="34" fill="' + c + '">' + n.value + "</text>" +
-      '<text x="' + (W - 50) + '" y="252" text-anchor="end" font-family="PT Sans, Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="' + c + '">AA 0000000</text>' +
-      '<line x1="300" y1="30" x2="300" y2="270" stroke="' + c + '" stroke-opacity=".18" stroke-width="3" stroke-dasharray="2 6"/>' +
-      '<text x="345" y="166" text-anchor="middle" transform="rotate(-14 345 150)" font-family="PT Sans, Arial, sans-serif" font-weight="700" font-size="30" letter-spacing="6" fill="#9b2a1c" opacity=".55">' + esc(spec) + "</text></svg>";
-    return s;
+  var lb = { i: 0, side: "front" };
+  function lightbox() {
+    var d = $("#noteLb");
+    if (!d) {
+      d = document.createElement("dialog");
+      d.id = "noteLb";
+      d.className = "lb";
+      document.body.appendChild(d);
+      d.addEventListener("click", function (e) {
+        if (e.target === d) { d.close(); return; }
+        var b = e.target.closest("button[data-act]"); if (!b) return;
+        var a = b.getAttribute("data-act");
+        if (a === "close") d.close();
+        else if (a === "prev") lbShow((lb.i + NOTES.length - 1) % NOTES.length, lb.side);
+        else if (a === "next") lbShow((lb.i + 1) % NOTES.length, lb.side);
+        else lbShow(lb.i, a);
+      });
+      d.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") { e.preventDefault(); lbShow((lb.i + NOTES.length - 1) % NOTES.length, lb.side); }
+        else if (e.key === "ArrowRight") { e.preventDefault(); lbShow((lb.i + 1) % NOTES.length, lb.side); }
+      });
+    }
+    return d;
+  }
+  function lbShow(i, side) {
+    var d = lightbox(), n = NOTES[i]; if (!n) return;
+    lb.i = i; lb.side = side;
+    d.innerHTML = '<div class="lb-box"><div class="lb-top"><b>' + esc(t("noteCap", { v: n.value })) + "</b> <span>" + esc(t("noteSize", { w: n.size[0], h: n.size[1] })) + " · " + esc(t("noteColour", { c: tri(n.colour) })) + "</span>" +
+      '<button type="button" class="lb-x" data-act="close" aria-label="' + esc(t("lbClose")) + '">×</button></div>' +
+      '<div class="lb-img"><img src="' + esc(n.img[side]) + '" alt="' + esc(noteAlt(n, side)) + '" width="' + Math.round(n.size[0] * 12) + '" height="' + Math.round(n.size[1] * 12) + '"></div>' +
+      '<div class="lb-bar"><button type="button" data-act="prev" aria-label="' + esc(t("lbPrev")) + '">‹</button>' +
+      '<span class="lb-sides"><button type="button" data-act="front" aria-pressed="' + (side === "front") + '">' + esc(t("lbFront")) + "</button>" +
+      '<button type="button" data-act="back" aria-pressed="' + (side === "back") + '">' + esc(t("lbBack")) + "</button></span>" +
+      '<button type="button" data-act="next" aria-label="' + esc(t("lbNext")) + '">›</button></div>' +
+      '<p class="lb-cap">' + esc(t(side === "back" ? "noteBack" : "noteFront", { s: tri(noteSide(n, side)) })) + "</p></div>";
+    if (!d.open) { if (d.showModal) d.showModal(); else d.setAttribute("open", ""); }
+    var f = $('[data-act="' + side + '"]', d); if (f) f.focus();
   }
   function coinSVG(c, i) {
     var S = c.size, r = 50, id = "ch" + i, horns = "";
@@ -334,13 +365,18 @@
   }
   pages.som = function () {
     getJSON("/data/currency.json").then(function (d) {
+      NOTES = d.banknotes;
       var el = $("#notes");
-      if (el) el.innerHTML = d.banknotes.map(function (n, i) {
-        var cap = "<b>" + esc(t("noteCap", { v: n.value })) + "</b>";
-        if (n.portrait) cap += " " + esc(t("notePortrait"));
-        if (n.added) cap += " " + esc(t("noteAdded"));
-        return '<div class="note"><figure>' + noteSVG(n, i) + "<figcaption>" + cap + "</figcaption></figure></div>";
-      }).join("");
+      if (el) {
+        el.innerHTML = NOTES.map(noteCard).join("");
+        el.onclick = function (e) {
+          var f = e.target.closest(".nflip");
+          if (f) { var on = !f.classList.contains("flipped"); f.classList.toggle("flipped", on); f.setAttribute("aria-pressed", String(on)); return; }
+          var z = e.target.closest(".nzoom");
+          if (z) { var i = +z.getAttribute("data-i"), card = $('.nflip[data-i="' + i + '"]', el); lbShow(i, card && card.classList.contains("flipped") ? "back" : "front"); }
+        };
+      }
+      var lbd = $("#noteLb"); if (lbd && lbd.open) lbShow(lb.i, lb.side);
       var co = $("#coins");
       if (co) co.innerHTML = d.coins.map(function (c, i) {
         return '<div class="coin">' + coinSVG(c, i) + "<b>" + esc(c.value + " " + t(c.unit === "som" ? "unitSom" : "unitTyiyn")) + '</b><br><span class="muted">' + esc(t("metal_" + c.metal)) + "</span></div>";
