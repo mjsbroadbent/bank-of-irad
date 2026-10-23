@@ -221,8 +221,8 @@ table.rates tr.usd td.som { font-weight: 700; }
 /* people */
 .person { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 14px; align-items: start; padding: 12px 0; border-bottom: 1px solid var(--line-2); }
 .person .ini { width: 64px; height: 64px; border-radius: 50%; background: var(--green); color: var(--ivory); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-weight: 700; font-size: 1.2rem; border: 2px solid var(--gold); }
-.person.chair { grid-template-columns: 128px minmax(0, 1fr); }
-.person .portrait { width: 128px; height: 160px; object-fit: cover; display: block; border: 1px solid var(--line-2); box-shadow: 0 0 0 3px var(--ivory), 0 0 0 4px var(--gold); }
+.person.chair { grid-template-columns: 136px minmax(0, 1fr); }
+.person .portrait { width: 128px; height: 160px; object-fit: cover; display: block; border: 1px solid var(--line-2); box-shadow: 0 0 0 3px var(--ivory), 0 0 0 4px var(--gold); margin: 4px; }
 .person b { font-family: var(--serif); color: var(--green-ink); font-size: 1.05rem; }
 .person .role { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--sage); font-weight: 700; }
 
