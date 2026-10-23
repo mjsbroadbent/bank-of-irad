@@ -1,0 +1,169 @@
+{
+  "notices": [
+    {
+      "id": "2026-10-15-clearing-days",
+      "kind": "notice",
+      "date": "2026-10-15",
+      "home": true,
+      "number": { "en": "Bank of Irad Notice 2026/6", "ir": "Irad Bankının 2026/6 bildirüüsü", "ru": "Уведомление Банка Ирада 2026/6" },
+      "status": { "en": "In force", "ir": "Küchündö", "ru": "Действует" },
+      "title": { "en": "On the operating days of the Bank of Irad Clearing House, November 2026 to January 2027", "ir": "Irad Bankının Kliring palatasının 2026-jıldın noyabrınan 2027-jıldın yanvarına cheyinki ish künderi jönündö", "ru": "О рабочих днях Клиринговой палаты Банка Ирада в ноябре 2026 – январе 2027 года" },
+      "summary": { "en": "The Clearing House will not settle payments on 25 and 26 December 2026 and 1 January 2027. Payments due on those days are settled on the next operating day.", "ir": "Kliring palatası 2026-jıldın 25 jana 26-dekabrında jana 2027-jıldın 1-yanvarında tölömdördü jürgüzböyt. Bul künderge tuura kelgen tölömdör kiyinki ish küngü jürgüzülöt.", "ru": "Клиринговая палата не проводит платежи 25 и 26 декабря 2026 года и 1 января 2027 года. Платежи этих дней проводятся в следующий рабочий день." },
+      "text": {
+        "en": ["<ol><li>The Bank of Irad Clearing House settles payments in United States dollars and in som on working days from Monday to Friday, except public holidays under the Holidays and Commemorative Days Act.</li><li>In the period from 1 November 2026 to 31 January 2027 the Clearing House will not operate on 25 December 2026 (Christmas Day), 26 December 2026 (Day after Christmas) and 1 January 2027 (New Year's Day).</li><li>Payment orders received for settlement on those days shall be settled on the next operating day. Banks shall inform their customers, in particular employers paying salaries and pensions at the end of December.</li><li>The last operating day of 2026 for the settlement of salaries and pensions is Thursday 24 December 2026.</li></ol>"],
+        "ru": ["<ol><li>Клиринговая палата Банка Ирада проводит платежи в долларах США и в сомах по рабочим дням с понедельника по пятницу, кроме праздничных дней, установленных Законом о праздничных и памятных днях.</li><li>В период с 1 ноября 2026 года по 31 января 2027 года Клиринговая палата не работает 25 декабря 2026 года (Рождество), 26 декабря 2026 года (второй день Рождества) и 1 января 2027 года (Новый год).</li><li>Платёжные поручения, поступившие для исполнения в эти дни, исполняются в следующий рабочий день. Банки информируют об этом клиентов, в особенности работодателей, выплачивающих заработную плату и пенсии в конце декабря.</li><li>Последний рабочий день 2026 года для проведения заработной платы и пенсий — четверг, 24 декабря 2026 года.</li></ol>"]
+      },
+      "signed": { "en": "For the Bank of Irad: Director, Payment Systems Department. Talas, 15 October 2026.", "ir": "Irad Bankı üchün: Tölöm sistemaları departamentinin direktoru. Talas, 2026-jıldın 15-oktyabrı.", "ru": "За Банк Ирада: директор Департамента платёжных систем. Талас, 15 октября 2026 г." }
+    },
+    {
+      "id": "2026-10-09-money-changers",
+      "kind": "statement",
+      "date": "2026-10-09",
+      "home": true,
+      "number": { "en": "Bank of Irad statement", "ir": "Irad Bankının bildirüüsü", "ru": "Заявление Банка Ирада" },
+      "title": { "en": "Warning to the public on the buying and selling of currency by unlicensed persons", "ir": "Litsenziyasız adamdardın valyuta satıp-aluusu jönündö kalkka eskertüü", "ru": "Предупреждение населению о покупке и продаже валюты лицами без лицензии" },
+      "summary": { "en": "Currency exchange is a licensed activity. Quotations offered by unlicensed money changers are not rates of the Bank of Irad and carry no protection. Exchange currency only at licensed banks.", "ir": "Valyuta almashtıruu litsenziyalanuuchu ish. Litsenziyasız akcha almashtıruuchulardın baaları Irad Bankının kurstarı emes jana ech kanday korgoo berbeyt. Valyutanı litsenziyası bar banktarda gana almashtırıñız.", "ru": "Обмен валюты является лицензируемой деятельностью. Котировки менял без лицензии не являются курсами Банка Ирада и не дают никакой защиты. Меняйте валюту только в лицензированных банках." },
+      "text": {
+        "en": [
+          "The Bank of Irad reminds residents of the Irad Special Economic Zone that the buying and selling of foreign currency as a business is an activity licensed by the Bank under the Banking and Commercial Currency Act 1993.",
+          "Persons offering to buy or sell United States dollars and other currencies in markets, at bus stations and in the street do not hold a licence of the Bank of Irad. The prices they quote are not exchange rates of the Bank of Irad and are not recognised for any official purpose, including contracts, customs declarations and court proceedings.",
+          "Residents who deal with unlicensed persons have no protection against counterfeit or damaged banknotes, short counting or theft, and no recourse to the Bank or to a licensed bank.",
+          "The official rate of the som is 8.40 to the United States dollar. It is fixed by the Bank of Irad Act 2008 and fully covered by the Bank's reserves. Quotations above the official rate reflect speculation in a small cash market and are no measure of the value of the som.",
+          "Currency should be exchanged only at the branches of licensed banks, which are listed in the Bank's register of licensed institutions."
+        ],
+        "ru": [
+          "Банк Ирада напоминает жителям Особой экономической зоны Ирада, что покупка и продажа иностранной валюты в качестве предпринимательской деятельности лицензируется Банком в соответствии с Законом о банках и коммерческой валюте 1993 года.",
+          "Лица, предлагающие купить или продать доллары США и другие валюты на рынках, автовокзалах и на улице, лицензии Банка Ирада не имеют. Называемые ими цены не являются курсами Банка Ирада и не признаются ни для каких официальных целей, включая договоры, таможенные декларации и судебные разбирательства.",
+          "Жители, обращающиеся к лицам без лицензии, не защищены от фальшивых или повреждённых банкнот, обсчёта и кражи и не могут обратиться ни в Банк, ни в лицензированный банк.",
+          "Официальный курс сома — 8,40 за доллар США. Он установлен Законом о Банке Ирада 2008 года и полностью покрыт резервами Банка. Котировки выше официального курса отражают спекуляцию на небольшом наличном рынке и не являются мерой стоимости сома.",
+          "Обменивать валюту следует только в отделениях лицензированных банков, перечисленных в реестре лицензированных учреждений Банка."
+        ]
+      },
+      "signed": { "en": "Press Office of the Bank of Irad. Talas, 9 October 2026.", "ir": "Irad Bankının press-kızmatı. Talas, 2026-jıldın 9-oktyabrı.", "ru": "Пресс-служба Банка Ирада. Талас, 9 октября 2026 г." }
+    },
+    {
+      "id": "2026-10-02-official-rate",
+      "kind": "press",
+      "date": "2026-10-02",
+      "home": true,
+      "number": { "en": "Press release", "ir": "Press-reliz", "ru": "Пресс-релиз" },
+      "title": { "en": "The official rate of the som is unchanged and fully covered", "ir": "Somdun rasmiy kursu özgörgön jok jana tolugu menen kamsızdalgan", "ru": "Официальный курс сома не изменился и полностью обеспечен" },
+      "summary": { "en": "The Bank of Irad's reserves fully cover the som in circulation. The official rate of 8.40 to the dollar is unchanged and no adjustment is planned.", "ir": "Irad Bankının rezervderi jügürtüüdögü somdu tolugu menen kamsızdayt. 1 dollarga 8,40 rasmiy kursu özgörgön jok, anı özgörtüü pilanda jok.", "ru": "Резервы Банка Ирада полностью покрывают сомы в обращении. Официальный курс 8,40 за доллар не изменился, его корректировка не планируется." },
+      "text": {
+        "en": [
+          "In response to enquiries from the press, the Bank of Irad states that its reserves fully cover the som in circulation, as the Bank of Irad Act 2008 requires.",
+          "The official rate remains 8.40 som to the United States dollar, the rate in force since 17 March 2008. No adjustment of the rate is planned.",
+          "Quotations offered for dollar banknotes in the markets of Talas and Nurzhan are not exchange rates. They reflect speculation in a small cash market at a time when shipments of banknotes through correspondent banks are reduced, and they have no bearing on the cover of the som.",
+          "Shops, utilities, public transport and public-sector employers continue to price and pay in som at the official rate. Non-cash payments in dollars and in som are settled through the Bank of Irad Clearing House without limit."
+        ],
+        "ru": [
+          "Отвечая на запросы прессы, Банк Ирада заявляет, что его резервы полностью покрывают сомы в обращении, как того требует Закон о Банке Ирада 2008 года.",
+          "Официальный курс остаётся равным 8,40 сома за доллар США — курсу, действующему с 17 марта 2008 года. Корректировка курса не планируется.",
+          "Котировки долларовых банкнот на рынках Таласа и Нуржана не являются обменными курсами. Они отражают спекуляцию на небольшом наличном рынке в период, когда поставки банкнот через банки-корреспонденты сокращены, и не влияют на обеспеченность сома.",
+          "Магазины, коммунальные службы, общественный транспорт и государственные работодатели по-прежнему устанавливают цены и платят в сомах по официальному курсу. Безналичные платежи в долларах и сомах проводятся через Клиринговую палату Банка Ирада без ограничений."
+        ]
+      },
+      "signed": { "en": "Press Office of the Bank of Irad. Talas, 2 October 2026.", "ir": "Irad Bankının press-kızmatı. Talas, 2026-jıldın 2-oktyabrı.", "ru": "Пресс-служба Банка Ирада. Талас, 2 октября 2026 г." }
+    },
+    {
+      "id": "boi-2026-05",
+      "kind": "notice",
+      "date": "2026-09-29",
+      "home": true,
+      "number": { "en": "Bank of Irad Notice 2026/5", "ir": "Irad Bankının 2026/5 bildirüüsü", "ru": "Уведомление Банка Ирада 2026/5" },
+      "status": { "en": "In force", "ir": "Küchündö", "ru": "Действует" },
+      "title": { "en": "On payment services offered without a licence", "ir": "Litsenziyasız sunulgan tölöm kızmattarı jönündö", "ru": "О платёжных услугах, оказываемых без лицензии" },
+      "summary": { "en": "The acceptance of payments and the holding of customer funds for residents of the ISEZ are licensed activities under the Banking and Commercial Currency Act 1993, whatever unit the service records.", "ir": "IAEZ turgundarı üchün tölöm kabıl aluu jana kardarlardın karajatın saktoo, kızmat kanday birdik menen esepteshpesin, 1993-jılkı Bank jana sooda valyutası jönündögü Mıyzam boyuncha litsenziyalanuuchu ish.", "ru": "Приём платежей и хранение средств клиентов для жителей ОЭЗИ являются лицензируемой деятельностью по Закону о банках и коммерческой валюте 1993 года, в каких бы единицах ни вёлся учёт." },
+      "text": {
+        "en": ["<ol><li>Any person who accepts payments from, or holds funds on behalf of, residents of the Irad Special Economic Zone carries on a payment or deposit-taking business within the meaning of the Banking and Commercial Currency Act 1993, whether the balances it records are expressed in som, in foreign currency or in any other unit.</li><li>Such a business requires a licence from the Bank of Irad.</li><li>Licensed banks shall not process transfers to or from services that carry on such a business without a licence.</li><li>Residents are advised that balances held with an unlicensed service carry no protection.</li></ol>"],
+        "ru": ["<ol><li>Любое лицо, принимающее платежи от жителей Особой экономической зоны Ирада или хранящее средства от их имени, осуществляет платёжную или депозитную деятельность в смысле Закона о банках и коммерческой валюте 1993 года, независимо от того, выражены ли учитываемые им остатки в сомах, в иностранной валюте или в любых иных единицах.</li><li>Такая деятельность требует лицензии Банка Ирада.</li><li>Лицензированные банки не проводят переводы в пользу или от служб, осуществляющих такую деятельность без лицензии.</li><li>Жителям сообщается, что остатки в службах без лицензии не защищены.</li></ol>"]
+      },
+      "signed": { "en": "For the Bank of Irad: E. Sadykbekov, Deputy Chairman. Talas, 29 September 2026.", "ir": "Irad Bankı üchün: E. Sadykbekov, töraganın orunbasarı. Talas, 2026-jıldın 29-sentyabrı.", "ru": "За Банк Ирада: Э. Садыкбеков, заместитель председателя. Талас, 29 сентября 2026 г." }
+    },
+    {
+      "id": "boi-2026-09-24",
+      "kind": "statement",
+      "date": "2026-09-24",
+      "home": false,
+      "number": { "en": "Bank of Irad statement", "ir": "Irad Bankının bildirüüsü", "ru": "Заявление Банка Ирада" },
+      "title": { "en": "On the digital token marketed as “Tulparcoin”", "ir": "“Tulparcoin” dep satılgan sanariptik token jönündö", "ru": "О цифровом токене, продвигаемом под названием «Тулпаркоин»" },
+      "summary": { "en": "Not legal tender; not issued or backed by any Iradi institution; not covered by the bank's reserves; no deposit protection. Buyers act at their own risk.", "ir": "Mıyzamduu tölöm karajatı emes; Iraddın ech bir mekemesi chıgarbagan jana kamsızdabagan; bankın rezervi menen kamtılbagan; depozit korgoosu jok. Satıp algandar öz tobokeldigi menen alat.", "ru": "Не является законным платёжным средством; не выпущен и не обеспечен ни одним учреждением Ирада; не покрыт резервами банка; не застрахован. Покупатели действуют на свой риск." },
+      "text": {
+        "en": [
+          "The Bank of Irad has received enquiries about a digital token promoted to residents under the name “Tulparcoin”.",
+          "The token is not legal tender in the Irad Special Economic Zone, where the legal tender is the som and the United States dollar. It is not issued or backed by any Iradi institution and is not covered by the bank's dollar reserves. Balances in it carry no deposit protection. Persons who buy it do so entirely at their own risk.",
+          "The Bank of Irad Act does not give the bank powers over assets that are neither money nor bank deposits. The offering of payment services is a separate matter, which the bank is examining under the Banking and Commercial Currency Act 1993.",
+          "The som remains fixed at 8.40 to the United States dollar and fully covered by the bank's reserves."
+        ],
+        "ru": [
+          "В Банк Ирада поступили запросы о цифровом токене, который продвигается среди жителей под названием «Тулпаркоин».",
+          "Токен не является законным платёжным средством в Особой экономической зоне Ирада, где законными платёжными средствами являются сом и доллар США. Он не выпущен и не обеспечен ни одним учреждением Ирада и не покрыт долларовыми резервами банка. Остатки в нём не застрахованы. Лица, покупающие его, делают это полностью на свой риск.",
+          "Закон о Банке Ирада не наделяет банк полномочиями в отношении активов, которые не являются ни деньгами, ни банковскими вкладами. Оказание платёжных услуг — отдельный вопрос, который банк изучает в соответствии с Законом о банках и коммерческой валюте 1993 года.",
+          "Сом остаётся фиксированным на уровне 8,40 за доллар США и полностью покрыт резервами банка."
+        ]
+      },
+      "signed": { "en": "For the Bank of Irad: E. Sadykbekov, Deputy Chairman. Talas, 24 September 2026.", "ir": "Irad Bankı üchün: E. Sadykbekov, töraganın orunbasarı. Talas, 2026-jıldın 24-sentyabrı.", "ru": "За Банк Ирада: Э. Садыкбеков, заместитель председателя. Талас, 24 сентября 2026 г." }
+    },
+    {
+      "id": "2026-08-04-notice-2026-2-review",
+      "kind": "press",
+      "date": "2026-08-04",
+      "home": false,
+      "number": { "en": "Press release", "ir": "Press-reliz", "ru": "Пресс-релиз" },
+      "title": { "en": "Notice 2026/2 on cash operations in dollars remains in force after quarterly review", "ir": "Dollar menen nakta operatsiyalar jönündögü 2026/2 bildirüü kvartaldık karoodon kiyin küchündö kaldı", "ru": "Уведомление 2026/2 о наличных операциях в долларах остаётся в силе после ежеквартального пересмотра" },
+      "summary": { "en": "Shipments of dollar banknotes through correspondent banks have not yet returned to their usual level. Banks may continue to set monthly limits on cash dollar withdrawals and conversions.", "ir": "Korrespondent banktar arkıluu dollar banknottorun jetkirüü azırınca kadimki deñgeeline kayta elek. Banktar dollardı naktalay aluuga jana almashtıruuga aylık chekti koyo berse bolot.", "ru": "Поставки долларовых банкнот через банки-корреспонденты пока не вернулись к обычному уровню. Банки могут и далее устанавливать месячные лимиты на снятие наличных долларов и конверсию." },
+      "text": {
+        "en": [
+          "The Board of the Bank of Irad has carried out the quarterly review of Notice 2026/2 of 4 May 2026 on cash operations in United States dollars, as paragraph 5 of the notice requires.",
+          "Shipments of United States dollar banknotes through correspondent banks have not yet returned to their usual level. The notice therefore remains in force without change. Licensed banks may continue to set monthly limits per customer on cash withdrawals in dollars and on conversions of som into dollar cash, and shall continue to publish them in their branches.",
+          "Limits do not apply to non-cash transfers in dollars, to payments under contracts with the Government of the Irad Special Economic Zone and its enterprises, or to the repayment of dollar deposits by transfer. All conversions are made at the official rate of IS 8.40 to the dollar.",
+          "The next review will take place in November 2026."
+        ],
+        "ru": [
+          "Правление Банка Ирада провело ежеквартальный пересмотр Уведомления 2026/2 от 4 мая 2026 года о наличных операциях в долларах США, как того требует пункт 5 уведомления.",
+          "Поставки банкнот долларов США через банки-корреспонденты пока не вернулись к обычному уровню. Поэтому уведомление остаётся в силе без изменений. Лицензированные банки могут и далее устанавливать месячные лимиты на одного клиента по снятию наличных долларов и конверсии сомов в наличные доллары и обязаны по-прежнему публиковать их в своих отделениях.",
+          "Лимиты не распространяются на безналичные переводы в долларах, на платежи по договорам с Правительством Особой экономической зоны Ирада и его предприятиями, а также на возврат долларовых вкладов переводом. Все конверсии проводятся по официальному курсу 8,40 сома за доллар.",
+          "Следующий пересмотр состоится в ноябре 2026 года."
+        ]
+      },
+      "signed": { "en": "Press Office of the Bank of Irad. Talas, 4 August 2026.", "ir": "Irad Bankının press-kızmatı. Talas, 2026-jıldın 4-avgustu.", "ru": "Пресс-служба Банка Ирада. Талас, 4 августа 2026 г." }
+    },
+    {
+      "id": "boi-2026-02",
+      "kind": "notice",
+      "date": "2026-05-04",
+      "home": false,
+      "number": { "en": "Bank of Irad Notice 2026/2", "ir": "Irad Bankının 2026/2 bildirüüsü", "ru": "Уведомление Банка Ирада 2026/2" },
+      "status": { "en": "In force", "ir": "Küchündö", "ru": "Действует" },
+      "title": { "en": "On cash operations in United States dollars", "ir": "AKSh dolları menen nakta operatsiyalar jönündö", "ru": "О наличных операциях в долларах США" },
+      "summary": { "en": "While banknote shipments from correspondent banks are reduced, banks may set monthly limits on cash dollar withdrawals and conversions per customer. Non-cash transfers, state contracts and the official rate of 8.40 are not affected.", "ir": "Korrespondent banktardan banknot jetkirüü azaygan mezgilde banktar bir kardar üchün dollardı naktalay aluuga jana almashtıruuga aylık chek koyo alat. Naktasız kotoruular, mamlekettik kelishimder jana 8,40 rasmiy kursu özgörböyt.", "ru": "Пока поставки банкнот от банков-корреспондентов сокращены, банки могут устанавливать месячные лимиты на снятие наличных долларов и конверсию для одного клиента. Безналичные переводы, госконтракты и официальный курс 8,40 не затрагиваются." },
+      "text": {
+        "en": ["<ol><li>Until shipments of United States dollar banknotes through correspondent banks return to their usual level, a licensed bank may set a monthly limit per customer on cash withdrawals in United States dollars and on conversions of som into United States dollar cash.</li><li>A bank that sets a limit shall publish it in its branches and apply it equally to all customers of the same class.</li><li>Limits shall not apply to non-cash transfers in United States dollars, to payments under contracts with the Government of the Irad Special Economic Zone and its enterprises, or to the repayment of dollar deposits by transfer.</li><li>Conversions shall be made at the official rate of IS 8.40 to the United States dollar. The som remains fully covered by the reserves of the Bank of Irad.</li><li>This notice shall be reviewed each quarter.</li></ol>"],
+        "ru": ["<ol><li>До тех пор, пока поставки банкнот долларов США через банки-корреспонденты не вернутся к обычному уровню, лицензированный банк может устанавливать месячный лимит на одного клиента по снятию наличных долларов США и по конверсии сомов в наличные доллары США.</li><li>Банк, установивший лимит, публикует его в своих отделениях и применяет его одинаково ко всем клиентам одной категории.</li><li>Лимиты не распространяются на безналичные переводы в долларах США, на платежи по договорам с Правительством Особой экономической зоны Ирада и его предприятиями, а также на возврат долларовых вкладов переводом.</li><li>Конверсия проводится по официальному курсу 8,40 сома за доллар США. Сом остаётся полностью покрытым резервами Банка Ирада.</li><li>Настоящее уведомление пересматривается ежеквартально.</li></ol>"]
+      },
+      "signed": { "en": "For the Bank of Irad: A. Temirov, Chairman. Talas, 4 May 2026.", "ir": "Irad Bankı üchün: A. Temirov, töraga. Talas, 2026-jıldın 4-mayı.", "ru": "За Банк Ирада: А. Темиров, председатель. Талас, 4 мая 2026 г." }
+    },
+    {
+      "id": "2026-03-17-fixed-rate",
+      "kind": "statement",
+      "date": "2026-03-17",
+      "home": false,
+      "number": { "en": "Bank of Irad statement", "ir": "Irad Bankının bildirüüsü", "ru": "Заявление Банка Ирада" },
+      "title": { "en": "On the fixed rate of the som: eighteen years at 8.40", "ir": "Somdun bekitilgen kursu jönündö: 8,40 menen on segiz jıl", "ru": "О фиксированном курсе сома: восемнадцать лет на уровне 8,40" },
+      "summary": { "en": "On 17 March 2008 the Bank of Irad Act set the rate of the som at 8.40 to the US dollar. The rate is unchanged and the som remains fully covered by the Bank's reserves.", "ir": "2008-jıldın 17-martında Irad Bankı jönündögü Mıyzam somdun kursun 1 AKSh dollarına 8,40 kılıp bekitken. Kurs özgörgön jok, som Bankın rezervderi menen tolugu menen kamsızdalgan boydon kalat.", "ru": "17 марта 2008 года Закон о Банке Ирада установил курс сома на уровне 8,40 за доллар США. Курс не изменился, сом остаётся полностью покрытым резервами Банка." },
+      "text": {
+        "en": [
+          "On 17 March 2008 the som began to be exchanged at 8.40 to the United States dollar under the Bank of Irad Act 2008, which reconstituted the Bank and kept the currency-board rules of the Banking and Commercial Currency Act 1993.",
+          "The Bank of Irad issues som only in exchange for dollars at the fixed rate and holds dollar reserves at least equal to the som in circulation. It does not lend to the government or buy government debt.",
+          "The rate has not changed since that date. The som remains fully covered by the Bank's reserves."
+        ],
+        "ru": [
+          "17 марта 2008 года сом начал обмениваться по курсу 8,40 за доллар США в соответствии с Законом о Банке Ирада 2008 года, который преобразовал Банк и сохранил правила валютного управления Закона о банках и коммерческой валюте 1993 года.",
+          "Банк Ирада выпускает сомы только в обмен на доллары по фиксированному курсу и держит долларовые резервы не меньше суммы сомов в обращении. Он не кредитует правительство и не покупает государственный долг.",
+          "С этой даты курс не менялся. Сом остаётся полностью покрытым резервами Банка."
+        ]
+      },
+      "signed": { "en": "Press Office of the Bank of Irad. Talas, 17 March 2026.", "ir": "Irad Bankının press-kızmatı. Talas, 2026-jıldın 17-martı.", "ru": "Пресс-служба Банка Ирада. Талас, 17 марта 2026 г." }
+    }
+  ]
+}

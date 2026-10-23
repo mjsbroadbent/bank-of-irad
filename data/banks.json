@@ -1,0 +1,124 @@
+{
+  "updated": "2026-10-01",
+  "institutions": [
+    {
+      "id": "talasbank",
+      "class": "bank",
+      "licence": "B-001",
+      "name": {
+        "en": "Talasbank (Bank of Talas)",
+        "ir": "Talas Bankı",
+        "ru": "Таласбанк (Банк Таласа)"
+      },
+      "logo": {
+        "en": "/assets/logos/talasbank-logo.svg",
+        "ir": "/assets/logos/talasbank-logo.svg",
+        "ru": "/assets/logos/talasbank-logo.svg"
+      },
+      "established": "1993",
+      "head_office": {
+        "en": "Silk Road Financial Tower, Talas",
+        "ir": "Jibek Jolu Finans Munarası, Talas",
+        "ru": "Финансовая башня «Шёлковый путь», Талас"
+      },
+      "branches": {
+        "total": 28,
+        "talas": 20,
+        "nurzhan": 6,
+        "iyik": 2
+      },
+      "clearing": true,
+      "note": {
+        "en": "Chartered by the Banking and Commercial Currency Act 1993. Holds the treasury and payroll accounts of the Government of the ISEZ and the export escrow accounts audited by the Irad Foreign Trade Escrow Authority. Dollar and som accounts; SMS payments.",
+        "ir": "1993-jılkı Bank jana sooda valyutası jönündögü Mıyzam menen tüzülgön. IAEZ Ökmötünün kaznachey jana aylık esepterin, Irad Tashkı soodasının eskrou ookumatı tekshergen eksport eskrou esepterin jürgüzöt. Dollar jana som esepteri; SMS tölömdör.",
+        "ru": "Учреждён Законом о банках и коммерческой валюте 1993 года. Ведёт казначейские и зарплатные счета Правительства ОЭЗИ и экспортные эскроу-счета, проверяемые Управлением эскроу внешней торговли Ирада. Счета в долларах и сомах; SMS-платежи."
+      }
+    },
+    {
+      "id": "akbata",
+      "class": "bank",
+      "licence": "B-004",
+      "name": {
+        "en": "Ak Bata Bank",
+        "ir": "Ak Bata Bank",
+        "ru": "Ак Бата Банк"
+      },
+      "logo": {
+        "en": "/assets/logos/akbata-logo.svg",
+        "ir": "/assets/logos/akbata-logo.svg",
+        "ru": "/assets/logos/akbata-logo.svg"
+      },
+      "established": "1995",
+      "head_office": {
+        "en": "Talas",
+        "ir": "Talas",
+        "ru": "Талас"
+      },
+      "branches": {
+        "total": 43,
+        "talas": 24,
+        "nurzhan": 15,
+        "iyik": 4
+      },
+      "clearing": true,
+      "note": {
+        "en": "Commercial bank founded in Talas in 1995. Dollar and som accounts.",
+        "ir": "1995-jılı Talasta negizdelgen kommertsiyalık bank. Dollar jana som esepteri.",
+        "ru": "Коммерческий банк, основан в Таласе в 1995 году. Счета в долларах и сомах."
+      }
+    },
+    {
+      "id": "chuybank",
+      "class": "bank",
+      "licence": "B-006",
+      "name": {
+        "en": "Chuy Commercial Bank",
+        "ir": "Chüy Kommertsiyalık Bankı",
+        "ru": "Чуй Коммерческий банк (ЧКБ)"
+      },
+      "logo": {
+        "en": "/assets/logos/chuybank-logo-latin.svg",
+        "ir": "/assets/logos/chuybank-logo-latin.svg",
+        "ru": "/assets/logos/chuybank-logo.svg"
+      },
+      "chairman": {
+        "en": "Viktor Pak",
+        "ir": "Viktor Pak",
+        "ru": "Виктор Пак"
+      },
+      "branches": {
+        "total": 33,
+        "talas": 12,
+        "nurzhan": 16,
+        "iyik": 5
+      },
+      "clearing": true,
+      "note": {
+        "en": "Commercial bank with most of its branches in Nurzhan. Dollar and som accounts.",
+        "ir": "Filialdarının köbü Nurjanda jaylashkan kommertsiyalık bank. Dollar jana som esepteri.",
+        "ru": "Коммерческий банк, большинство отделений которого находится в Нуржане. Счета в долларах и сомах."
+      }
+    },
+    {
+      "id": "transoxiana",
+      "class": "mfi",
+      "licence": "M-002",
+      "name": {
+        "en": "Transoxiana Microfinance Fund",
+        "ir": "Transoksiana mikrokarjı fondu",
+        "ru": "Микрофинансовый фонд «Трансоксиана»"
+      },
+      "offices": {
+        "en": "5 offices in Talas",
+        "ir": "Talasta 5 keñse",
+        "ru": "5 офисов в Таласе"
+      },
+      "clearing": false,
+      "note": {
+        "en": "Microfinance institution lending to traders, small farms and households.",
+        "ir": "Soodagerlerge, chakan dıykan charbalarına jana üy-bülölörgö karız bergen mikrokarjı mekemesi.",
+        "ru": "Микрофинансовая организация, кредитующая торговцев, небольшие фермерские хозяйства и домохозяйства."
+      }
+    }
+  ]
+}

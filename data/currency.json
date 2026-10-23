@@ -1,0 +1,17 @@
+{
+  "banknotes": [
+    { "value": 1,   "word": { "en": "ONE SOM", "ir": "BIR SOM", "ru": "ОДИН СОМ" },          "ink": "#3f6b55", "tint": "#e6efe6" },
+    { "value": 5,   "word": { "en": "FIVE SOM", "ir": "BESH SOM", "ru": "ПЯТЬ СОМОВ" },       "ink": "#7a5230", "tint": "#f2e8dc" },
+    { "value": 10,  "word": { "en": "TEN SOM", "ir": "ON SOM", "ru": "ДЕСЯТЬ СОМОВ" },        "ink": "#2f5a7a", "tint": "#e3ecf2" },
+    { "value": 20,  "word": { "en": "TWENTY SOM", "ir": "JIYIRMA SOM", "ru": "ДВАДЦАТЬ СОМОВ" }, "ink": "#5e4778", "tint": "#ece6f2" },
+    { "value": 50,  "word": { "en": "FIFTY SOM", "ir": "ELÜÜ SOM", "ru": "ПЯТЬДЕСЯТ СОМОВ" },  "ink": "#69702c", "tint": "#eff0dd" },
+    { "value": 100, "word": { "en": "ONE HUNDRED SOM", "ir": "JÜZ SOM", "ru": "СТО СОМОВ" },  "ink": "#0e4d3a", "tint": "#e8eedf", "portrait": true },
+    { "value": 500, "word": { "en": "FIVE HUNDRED SOM", "ir": "BESH JÜZ SOM", "ru": "ПЯТЬСОТ СОМОВ" }, "ink": "#8a2f2a", "tint": "#f4e4df", "added": true }
+  ],
+  "coins": [
+    { "value": "10", "unit": "tyiyn", "metal": "bronze", "fill": "#b9814a", "edge": "#8a5a2c", "size": 74 },
+    { "value": "50", "unit": "tyiyn", "metal": "brass",  "fill": "#cfae55", "edge": "#9c7d2c", "size": 84 },
+    { "value": "1",  "unit": "som",   "metal": "nickel", "fill": "#c9ccc8", "edge": "#8d918d", "size": 92 },
+    { "value": "5",  "unit": "som",   "metal": "bimetal", "fill": "#cfae55", "edge": "#8d918d", "ring": "#c9ccc8", "size": 100 }
+  ]
+}
